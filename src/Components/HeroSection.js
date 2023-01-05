@@ -16,9 +16,9 @@ const Wrapper = styled.section`
 
 .Content h5{
 font-size: 1.5rem;
-font-weight: bold;
+/* font-weight: bold; */
 margin-bottom:15px ;
-color: blue;
+color:rgba(81, 56, 238, 5);
 }
 
 .Content h1{

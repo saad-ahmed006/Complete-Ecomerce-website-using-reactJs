@@ -1,13 +1,13 @@
 import React from 'react'
-// import styled from 'styled-components'
 import HeroSection from './Components/HeroSection';
+import Services from './Components/Services';
+import Trusted from './Components/Trusted';
 export default function Home() {
     return (
+        <>
         <HeroSection Title={"Thapa Store"}/>
+        <Services/>
+        <Trusted/>
+        </>
     )
 }
-// const Wrapper = styled.section`
-//     background-color: ${({ theme }) => theme.colors.bg};
-//     width: 100vh;
-//     height: 10vh;
-//     `;

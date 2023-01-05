@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 import Nav from './Nav';
 
 const MainHeader = styled.header`
-  padding: 25px;
-  height: 80px;
+  padding: 4.8rem 2rem;
+  height: 10rem;
   background-color: ${({ theme }) => theme.colors.bg};
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   .logo {
-    width: 80%;
+    height: 5rem;
   }
 
 `;

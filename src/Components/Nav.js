@@ -8,14 +8,14 @@ const NavBar = styled.nav`
 .navbar-lists{
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap:4.8rem ;
 
     .navbar-link {
         &:link,
         &:visited {
           display: inline-block;
           text-decoration: none;
-          font-size: 12px;
+          font-size: 1.4rem;
           font-weight: 500;
           text-transform: uppercase;
           color: ${({ theme }) => theme.colors.black};
@@ -33,11 +33,11 @@ const NavBar = styled.nav`
 }
 .cart-trolley{
     position: relative;
-    font-size: 30px;
+    font-size: 3.2rem;
 }
 .cart-total--item{
-        width: 60%;
-        height: 60%;
+        width: 2.4rem;
+        height:2.4rem;
         position: absolute;
         background-color: #000;
         color: #000;
@@ -67,14 +67,14 @@ const NavBar = styled.nav`
         border: ${({ theme }) => theme.colors.black};
     }
     .mobile-nav-icon{
-        font-size: 25px;
+        font-size: 4.2rem;
         color:  ${({ theme }) => theme.colors.black};
     }
 
 
     .active .mobile-nav-icon {
         display: none;
-        font-size: 25px;
+        font-size: 4.2rem;
         position: absolute;
         top: 30%;
         right: 10%;
@@ -152,7 +152,7 @@ export default function Nav() {
                         className="navbar-link"
                         onClick={(() => { setMenuIcon(false) })}
                     >
-                        Contact us
+                        Contact
                     </NavLink>
 
                     <NavLink to="/cart"

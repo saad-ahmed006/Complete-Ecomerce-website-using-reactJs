@@ -1,7 +1,8 @@
 import React from 'react'
-
+import HeroSection from './Components/HeroSection'
 export default function About() {
   return (
-    <div>About</div>
+    <HeroSection Title={"Thapa Ecommerce"}/>
+
   )
 }

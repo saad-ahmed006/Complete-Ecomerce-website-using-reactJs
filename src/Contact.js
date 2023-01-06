@@ -7,6 +7,7 @@ h2{
 font-size: 3rem;
 text-align: center;
 margin-top:4rem;
+margin-bottom:4rem;
 }
 
 .contact-inputs{

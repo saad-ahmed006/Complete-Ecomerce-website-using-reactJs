@@ -13,6 +13,7 @@ import Cart from './Cart';
 import { GlobalStyle } from './GlobleStyle';
 import { ThemeProvider } from 'styled-components';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 function App() {
   const theme = {
@@ -50,6 +51,7 @@ function App() {
             <Route path='/sigleproduct/:id' element={<SingleProduct />} />
             <Route path='/cart' element={<Cart />} />
           </Routes>
+          <Footer/>
         </Router>
       </ThemeProvider>
     </>

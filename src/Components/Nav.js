@@ -67,14 +67,14 @@ const NavBar = styled.nav`
         border: ${({ theme }) => theme.colors.black};
     }
     .mobile-nav-icon{
-        font-size: 4.2rem;
+        font-size: 3.2rem;
         color:  ${({ theme }) => theme.colors.black};
     }
 
 
     .active .mobile-nav-icon {
         display: none;
-        font-size: 4.2rem;
+        font-size: 3.2rem;
         position: absolute;
         top: 30%;
         right: 10%;

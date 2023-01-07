@@ -14,6 +14,7 @@ import { GlobalStyle } from './GlobleStyle';
 import { ThemeProvider } from 'styled-components';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import ErrorPage from './Components/ErrorPage';
 
 function App() {
   const theme = {
@@ -50,6 +51,7 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/sigleproduct/:id' element={<SingleProduct />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='*' element={<ErrorPage />} />
           </Routes>
           <Footer/>
         </Router>

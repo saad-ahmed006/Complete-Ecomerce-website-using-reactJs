@@ -14,7 +14,7 @@ import { GlobalStyle } from './GlobleStyle';
 import { ThemeProvider } from 'styled-components';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import ErrorPage from './Components/ErrorPage';
+import ErrorPage from './ErrorPage';
 
 function App() {
   const theme = {

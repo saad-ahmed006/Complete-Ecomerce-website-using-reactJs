@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import Button from '../Components/Button'
+import Button from './Components/Button'
 
 const Wrapper=styled.section`
 .ErrorContainer{

@@ -10,7 +10,6 @@ const Wrapper = styled.section`
     width: 60%;
     border-radius: 3px;
     margin: 10px auto;
-    
 } 
 
 .Image img{
@@ -28,7 +27,6 @@ const Wrapper = styled.section`
 .FeatureItemText h3{
 color: black;
 text-transform: capitalize;
-
 } 
 
 .FeatureItemText p{
@@ -53,7 +51,6 @@ text-transform: capitalize;
     transform: translateX(-100%);
     transition: all 0.4s ease-in-out;
     border-radius: 3px; 
-
 }
 
 .ImageCategory{
@@ -71,7 +68,6 @@ text-transform: capitalize;
 `;
 export default function Product(curElem) {
     const { id, name, image, price, category } = curElem;
-
     return (
         <Wrapper>
             <div className='FeatureItem'>
@@ -83,11 +79,10 @@ export default function Product(curElem) {
                     </div>
                     <div className='FeatureItemText'>
                         <h3>{name}</h3>
-                        <p><NumberFormat price={price}/></p>
+                        <p><NumberFormat price={price} /></p>
                     </div>
                 </NavLink>
             </div>
         </Wrapper>
-
     )
 }

@@ -13,9 +13,36 @@ border-radius: 6px;
 .SecondColoum img{
   padding:0.3rem;
   border-radius: 6px;
-width: 30rem;
+width: 25rem;
+}
+
+@media (max-width: ${({ theme }) => theme.media.tab}){
+  .Container{
+  display:flex;
+  padding: 0rem ;
+  flex-direction: column; 
+}
+.FirstColoum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.FirstColoum img {
+width: 15rem;
+height:10rem;
+padding: 0.3rem;
+border-radius: 6px;
+}
+.SecondColoum img{
+  padding:0.3rem;
+  border-radius: 6px;
+width: 100%;
+}
 }
 `;
+
 
 const MyImage = ({ imgs = [{ url: "" }] }) => {
   const [mainImage, setMainImage] = useState(imgs[0]);

@@ -7,19 +7,18 @@ import MyImages from "./Components/MyImages";
 import { TbTruckDelivery, TbReplace } from 'react-icons/tb'
 import { MdSecurity } from 'react-icons/md'
 import FormatCurruncy from './Components/FormatCurruncy'
+import Star from "./Components/Star";
 const API = "https://api.pujakaitem.com/api/products";
 const Wrapper = styled.section`
 .Container{
   display:flex;
-  padding: 6rem;
+  padding: 1rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .Image{
-  /* background-color: gray; */
   width: 40%;
-
 }
 .ProductData{
   width: 40%;
@@ -34,6 +33,10 @@ padding-bottom:1.8rem;
 padding-top:1.8rem;
 font-size: 1.2rem;
 text-transform: capitalize;
+}
+.description{
+  width: 100%;
+  padding: 0px;
 }
 span{
   font-weight: bold;
@@ -65,6 +68,29 @@ span{
 .Divider{
   border: 1px solid #d9dcde;
   margin-top: 0.4rem;
+}
+
+@media (max-width: ${({ theme }) => theme.media.tab}){
+  .Container{
+  display:flex;
+  padding: 0rem ;
+  flex-direction: column;
+ 
+}
+.Image{
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.ProductData{
+  width: 100%;
+  background-color: #F6F8FA;
+padding:1.5rem;
+}
+.ProductDataWarrentyIcon p{
+text-align: center;
+}
+
 }
 `;
 
@@ -102,15 +128,15 @@ export default function SingleProduct() {
           </div>
           <div className="ProductData">
             <h2>{name}</h2>
-            <p>{stars}</p>
-            <p>{reviews} Reviews</p>
+            <Star stars={stars} reviews={reviews}/>
+          
             <p className="ProductDataPrice">
               MRP:<del><FormatCurruncy price={price + 250000} /></del>
             </p>
             <p className="ProductDealDataPrice">
               Deal of the Day:<FormatCurruncy price={price} />
             </p>
-            <p >{description}</p>
+            <p className="description" >{description}</p>
             <div className="ProductWarrenty">
               <div className="ProductDataWarrentyIcon">
                 <TbTruckDelivery className="Icon" />

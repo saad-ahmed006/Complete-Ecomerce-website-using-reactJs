@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
+import { NavLink } from 'react-router-dom';
+import Button from './Button'
 import styled from 'styled-components'
+import CardAmountToogle from './CardAmountToogle';
 const Wrapper = styled.section`
 p{
   display: flex;
@@ -27,15 +30,23 @@ p{
   .active {
     opacity: 1;
   }
-  
+
   .checkStyle{
     color: white;
   }
 
 `;
 export default function AddToCard({ product }) {
-    const { id, colors, stock } = product
+    const { id, colors, stock } = product;
     const [color, setColor] = useState(colors[0])
+    const [amount, setAmount] = useState(1)
+ 
+    const setDecrease=()=>{
+        amount>1?setAmount(amount-1):setAmount(amount)
+    }
+    const setIncrease=()=>{
+        amount<stock?setAmount(amount+1):setAmount(stock)
+    }
     return (
         <Wrapper>
             <div className='Colors'>
@@ -52,6 +63,14 @@ export default function AddToCard({ product }) {
                         })}
                 </p>
             </div>
+            <CardAmountToogle
+                amount={amount}
+                setIncrease={setIncrease}
+                setDecrease={setDecrease} />
+
+                <NavLink to="/cart">
+<Button>Add To Cart</Button>
+                </NavLink>
         </Wrapper>
     )
 }

@@ -28,10 +28,10 @@ padding:4.8rem;
 
 .ProductData h2{
 text-transform: capitalize;
-padding-bottom:1.8rem;
+padding-bottom:0.6rem;
 }
 .ProductData p{
-padding-top:1.8rem;
+padding-top:1.3rem;
 font-size: 1.2rem;
 text-transform: capitalize;
 }

@@ -7,6 +7,7 @@ import MyImages from "./Components/MyImages";
 import { TbTruckDelivery, TbReplace } from 'react-icons/tb'
 import { MdSecurity } from 'react-icons/md'
 import FormatCurruncy from './Components/FormatCurruncy'
+import AddToCard from "./Components/AddToCard";
 import Star from "./Components/Star";
 const API = "https://api.pujakaitem.com/api/products";
 const Wrapper = styled.section`
@@ -70,6 +71,15 @@ span{
   margin-top: 0.4rem;
 }
 
+hr {
+      max-width: 100%;
+      width: 90%;
+      border: 0.1rem solid #000;
+      color: red;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
 @media (max-width: ${({ theme }) => theme.media.tab}){
   .Container{
   display:flex;
@@ -124,12 +134,12 @@ export default function SingleProduct() {
         <PageNavigation title={name} />
         <div className="Container">
           <div className="Image">
-            <MyImages imgs={image}/>
+            <MyImages imgs={image} />
           </div>
           <div className="ProductData">
             <h2>{name}</h2>
-            <Star stars={stars} reviews={reviews}/>
-          
+            <Star stars={stars} reviews={reviews} />
+
             <p className="ProductDataPrice">
               MRP:<del><FormatCurruncy price={price + 250000} /></del>
             </p>
@@ -155,14 +165,12 @@ export default function SingleProduct() {
                 <p>2 Year Warranty</p>
               </div>
             </div>
-<div className="Divider"></div>
-<p>Available:<span>{stock >0 ? "InStock":"Not Available"}</span></p>
-<p>ID:<span>{id}</span></p>
-<p>Brand:<span>{company}</span></p>
-
-
-
-
+            <div className="Divider"></div>
+            <p>Available:<span>{stock > 0 ? "InStock" : "Not Available"}</span></p>
+            <p>ID:<span>{id}</span></p>
+            <p>Brand:<span>{company}</span></p>
+            <hr></hr>
+            {stock > 0 ? <AddToCard  product={singleProduct}/> : ""}
 
           </div>
         </div>
